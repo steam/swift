@@ -249,20 +249,6 @@ if hasValue {
 ##switch statements
 1.Pattern Matching
 
-
-`let yetAnotherPoint = (1, -1)`
-
-```
-switch yetAnotherPoint {
-case let (x, y) where x == y:
-    println("(\(x), \(y)) are the same")
-case let (x, y) where x == -y:
-    println("(\(x), \(y)) x is equal to the negative of y")
-case let (x, y):
-    println("(\(x), \(y)) x and y are arbitrary")
-}
-```
-
 `let vegetable = "red pepper"`
 
 ```
@@ -275,6 +261,19 @@ case let x where x.hasSuffix("pepper"):
   println("Is it a spicy \(x)?")
 default:
   println("Everything tastes good in soup.")
+}
+```
+
+`let yetAnotherPoint = (1, -1)`
+
+```
+switch yetAnotherPoint {
+case let (x, y) where x == y:
+    println("(\(x), \(y)) are the same")
+case let (x, y) where x == -y:
+    println("(\(x), \(y)) x is equal to the negative of y")
+case let (x, y):
+    println("(\(x), \(y)) x and y are arbitrary")
 }
 ```
 
